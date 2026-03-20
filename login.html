@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gradient-auth flex items-center justify-center min-h-screen" style="min-height: 100vh;">
+
+    <div class="card auth-card slide-up" style="width: 100%; max-width: 420px;">
+        <div class="text-center mb-lg">
+            <h2 class="navbar-brand justify-center mb-sm">Corp<span>Venue</span></h2>
+            <p>Welcome back! Please login to your account.</p>
+        </div>
+
+        <div class="auth-tabs">
+            <button class="tab-btn active" data-target="user-login">User</button>
+            <button class="tab-btn" data-target="owner-login">Owner</button>
+            <button class="tab-btn" data-target="admin-login">Admin</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- User Login -->
+            <div id="user-login" class="tab-pane active fade-in">
+                <form action="user_dashboard.html">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="user@example.com"
+                            value="user@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" value="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full mb-md">Login as User</button>
+                </form>
+            </div>
+
+            <!-- Owner Login -->
+            <div id="owner-login" class="tab-pane hidden fade-in" style="display: none;">
+                <form action="owner_dashboard.html">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="owner@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full mb-md">Login as Owner</button>
+                </form>
+            </div>
+
+            <!-- Admin Login -->
+            <div id="admin-login" class="tab-pane hidden fade-in" style="display: none;">
+                <form action="admin_dashboard.html">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="admin@corpvenue.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full mb-md">Login as Admin</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="text-center text-sm text-muted">
+            Don't have an account? <a href="signup.html" class="text-accent hover:text-accent-dark font-medium">Sign
+                Up</a>
+        </div>
+        <div class="text-center mt-md">
+            <a href="index.html" class="text-sm text-muted hover:text-main">&larr; Back to Home</a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Inline script for tab switching specific to this page if main.js is not generic enough yet
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Update Tab Styles
+                    tabs.forEach(t => {
+                        t.classList.remove('active', 'border-accent-color', 'text-accent-color');
+                        t.classList.add('text-muted', 'border-transparent');
+                    });
+                    tab.classList.add('active', 'border-accent-color', 'text-accent-color');
+                    tab.classList.remove('text-muted', 'border-transparent');
+
+                    // Show Content
+                    const target = tab.getAttribute('data-target');
+                    panes.forEach(p => {
+                        p.style.display = 'none';
+                        p.classList.remove('active');
+                    });
+                    document.getElementById(target).style.display = 'block';
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

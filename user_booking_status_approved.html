@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Approved - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span></a>
+            <div class="navbar-actions">
+                <a href="user_dashboard.html" class="btn btn-primary btn-sm">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <h2 class="mb-xl">Booking Status: #BK-2024-8892</h2>
+
+        <div class="status-tracker">
+            <div class="tracker-line"></div>
+
+            <div class="tracker-step completed">
+                <div class="tracker-dot">✓</div>
+                <p>Request Sent</p>
+            </div>
+            <div class="tracker-step completed">
+                <div class="tracker-dot">✓</div>
+                <p>Owner Approved</p>
+            </div>
+            <div class="tracker-step active">
+                <div class="tracker-dot">3</div>
+                <p>Advance Payment</p>
+            </div>
+            <div class="tracker-step">
+                <div class="tracker-dot">4</div>
+                <p>Confirmed</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-xl">
+            <div>
+                <div class="card bg-green-50 border-green-100 mb-md">
+                    <div class="flex items-start gap-md">
+                        <div class="text-2xl">✅</div>
+                        <div>
+                            <h4 class="text-green-800">Request Approved!</h4>
+                            <p class="text-green-700">The venue owner has approved your booking. Please pay the advance
+                                amount to block the venue.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="mb-md">Payment Details</h4>
+                    <div class="flex justify-between items-center mb-sm">
+                        <span>Total Amount</span>
+                        <span>₹ 40,000</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-md">
+                        <span>Advance Required (50%)</span>
+                        <span class="text-lg font-bold">₹ 20,000</span>
+                    </div>
+
+                    <div class="bg-slate-50 p-2 rounded text-sm text-muted mb-md">
+                        Payment deadline: 12 Nov 2024 (24 hours) <br>
+                        Refund policy applies.
+                    </div>
+
+                    <a href="user_booking_confirmed.html" class="btn btn-primary btn-full">Pay Advance Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4 class="mb-md">Booking Summary</h4>
+                <div class="flex flex-col gap-sm">
+                    <div class="flex justify-between">
+                        <span class="text-muted">Venue</span>
+                        <strong>Grand Conference Hall</strong>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Date</span>
+                        <strong>20 Nov 2024</strong>
+                    </div>
+                    <!-- Stats generic -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

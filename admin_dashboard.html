@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .sidebar {
+            width: 260px;
+            background-color: var(--primary-color);
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: var(--spacing-lg);
+        }
+
+        .main-content {
+            margin-left: 260px;
+        }
+
+        .sidebar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: var(--spacing-xl);
+            display: block;
+        }
+
+        .sidebar-link {
+            display: block;
+            padding: var(--spacing-md);
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="index.html" class="sidebar-brand text-accent">CorpVenue <span
+                class="text-xs text-white opacity-50 block font-normal">Admin Panel</span></a>
+
+        <nav>
+            <a href="admin_dashboard.html" class="sidebar-link active">Dashboard</a>
+            <a href="admin_approvals.html" class="sidebar-link">Approvals <span
+                    class="badge badge-pending float-right text-xs">5</span></a>
+            <a href="admin_bookings.html" class="sidebar-link">All Bookings</a>
+            <a href="admin_disputes.html" class="sidebar-link">Disputes & Refunds</a>
+            <a href="admin_users_owners.html" class="sidebar-link">Users & Owners</a>
+            <a href="#" class="sidebar-link">Settings</a>
+            <div class="mt-xl pt-lg border-t border-slate-700">
+                <a href="index.html" class="sidebar-link">Logout</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="bg-white border-b sticky top-0 z-50 px-xl py-md mb-lg">
+            <div class="flex justify-between items-center">
+                <h2>Overview</h2>
+                <div class="flex items-center gap-md">
+                    <span class="text-xs text-muted">Last login: Today, 09:41 AM</span>
+                    <div class="w-8 h-8 bg-accent-color rounded-full flex items-center justify-center text-white">A
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="px-xl pb-xl">
+            <div class="grid grid-cols-4 gap-lg mb-xl">
+                <div class="stat-card">
+                    <div>
+                        <p class="text-muted text-sm">Pending Approvals</p>
+                        <h3>5</h3>
+                    </div>
+                    <div class="stat-icon text-warning">⏳</div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <p class="text-muted text-sm">Active Bookings</p>
+                        <h3>42</h3>
+                    </div>
+                    <div class="stat-icon text-primary">📅</div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <p class="text-muted text-sm">Total Revenue</p>
+                        <h3>₹ 12.5L</h3>
+                    </div>
+                    <div class="stat-icon text-success">💰</div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <p class="text-muted text-sm">Disputes</p>
+                        <h3 class="text-danger">1</h3>
+                    </div>
+                    <div class="stat-icon text-danger">⚠️</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-lg">
+                <div style="grid-column: span 2;">
+                    <div class="card">
+                        <div class="flex justify-between items-center mb-md">
+                            <h4>Recent Activities</h4>
+                            <button class="btn btn-sm btn-outline">Generate Report</button>
+                        </div>
+                        <table class="w-full text-left">
+                            <thead class="text-sm text-muted border-b">
+                                <tr>
+                                    <th class="py-sm">Time</th>
+                                    <th class="py-sm">Activity</th>
+                                    <th class="py-sm">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="border-b">
+                                    <td class="py-md">10:45 AM</td>
+                                    <td>New Venue Registration: <strong>Sky Lounge</strong></td>
+                                    <td><span class="badge badge-pending">Review</span></td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-md">09:30 AM</td>
+                                    <td>Adv. Payment Confirmed: #BK-8892</td>
+                                    <td><span class="badge badge-confirmed">Audit</span></td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-md">Yesterday</td>
+                                    <td>Owner Dispute Resolved: #DSP-12</td>
+                                    <td><span class="badge badge-approved">Closed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card mb-lg">
+                        <h4 class="mb-md">Platform Health</h4>
+                        <div class="flex justify-between mb-sm text-sm">
+                            <span>Server Uptime</span>
+                            <span class="text-success font-bold">99.9%</span>
+                        </div>
+                        <div class="flex justify-between mb-sm text-sm">
+                            <span>Active Users</span>
+                            <span class="font-bold">1,204</span>
+                        </div>
+                        <div class="flex justify-between mb-sm text-sm">
+                            <span>Active Owners</span>
+                            <span class="font-bold">85</span>
+                        </div>
+                    </div>
+
+                    <div class="card bg-slate-800 text-white">
+                        <h4 class="text-white mb-md">System Alerts</h4>
+                        <p class="text-sm opacity-80 mb-sm">No critical alerts.</p>
+                        <p class="text-xs opacity-50">Last check: 2 mins ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

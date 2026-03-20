@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .stat-card {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--bg-body);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span> <span
+                    class="badge badge-approved ml-sm">Owner</span></a>
+            <ul class="navbar-nav">
+                <li><a href="owner_dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="owner_bookings.html" class="nav-link">Bookings <span
+                            class="badge badge-pending">2</span></a></li>
+                <li><a href="owner_manage_venue.html" class="nav-link">My Venues</a></li>
+                <li><a href="owner_invoices.html" class="nav-link">Invoices</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="index.html" class="btn btn-outline btn-sm">Switch to User View</a>
+                <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center">O</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <div class="flex justify-between items-center mb-lg">
+            <h2>Welcome back, Rajesh</h2>
+            <a href="owner_manage_venue.html" class="btn btn-primary">+ Add New Venue</a>
+        </div>
+
+        <div class="grid grid-cols-4 gap-lg mb-xl">
+            <div class="stat-card">
+                <div>
+                    <p class="text-muted text-sm">Total Bookings</p>
+                    <h3>124</h3>
+                </div>
+                <div class="stat-icon text-accent">📅</div>
+            </div>
+            <div class="stat-card">
+                <div>
+                    <p class="text-muted text-sm">Pending Request</p>
+                    <h3>2</h3>
+                </div>
+                <div class="stat-icon text-warning">⏳</div>
+            </div>
+            <div class="stat-card">
+                <div>
+                    <p class="text-muted text-sm">This Month</p>
+                    <h3>₹ 2.4L</h3>
+                </div>
+                <div class="stat-icon text-success">💰</div>
+            </div>
+            <div class="stat-card">
+                <div>
+                    <p class="text-muted text-sm">Venues Active</p>
+                    <h3>3</h3>
+                </div>
+                <div class="stat-icon text-primary">🏢</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-lg">
+            <div style="grid-column: span 2;">
+                <div class="card">
+                    <div class="flex justify-between items-center mb-md">
+                        <h4>Recent Requests</h4>
+                        <a href="owner_bookings.html" class="btn btn-sm btn-outline">View All</a>
+                    </div>
+                    <table class="w-full text-left" style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr class="border-b text-sm text-muted">
+                                <th class="py-sm font-medium">Company</th>
+                                <th class="py-sm font-medium">Venue</th>
+                                <th class="py-sm font-medium">Date</th>
+                                <th class="py-sm font-medium">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-md">TechSolutions Pvt Ltd</td>
+                                <td>Grand Conference Hall</td>
+                                <td>24 Nov 2024</td>
+                                <td>
+                                    <div class="flex gap-sm">
+                                        <button class="btn btn-sm btn-primary">Approve</button>
+                                        <button class="btn btn-sm btn-outline text-danger border-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-md">Global Corp</td>
+                                <td>Sunset Garden</td>
+                                <td>15 Dec 2024</td>
+                                <td>
+                                    <div class="flex gap-sm">
+                                        <button class="btn btn-sm btn-primary">Approve</button>
+                                        <button class="btn btn-sm btn-outline text-danger border-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <div class="card">
+                    <h4 class="mb-md">Upcoming Events</h4>
+                    <div class="flex flex-col gap-md">
+                        <div class="p-sm bg-slate-50 rounded border">
+                            <p class="text-sm font-bold">Annual Meet - Acme Corp</p>
+                            <div class="flex justify-between text-xs text-muted mt-xs">
+                                <span>Tomorrow, 09:00 AM</span>
+                                <span>Grand Hall</span>
+                            </div>
+                        </div>
+                        <div class="p-sm bg-slate-50 rounded border">
+                            <p class="text-sm font-bold">Training - Beta Inc</p>
+                            <div class="flex justify-between text-xs text-muted mt-xs">
+                                <span>20 Nov, 10:00 AM</span>
+                                <span>Boardroom</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

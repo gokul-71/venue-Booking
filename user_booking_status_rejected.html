@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Status - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span></a>
+            <div class="navbar-actions">
+                <a href="user_dashboard.html" class="btn btn-primary btn-sm">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <h2 class="mb-xl">Booking Status: #BK-2024-8892</h2>
+
+        <!-- Status Tracker (Rejected State) -->
+        <div class="status-tracker">
+            <div class="tracker-line"></div>
+
+            <div class="tracker-step completed">
+                <div class="tracker-dot">✓</div>
+                <p>Request Sent</p>
+            </div>
+            <div class="tracker-step active">
+                <div class="tracker-dot"
+                    style="background-color: var(--accent-danger); border-color: var(--accent-danger); color: white;">✕
+                </div>
+                <p class="text-danger font-medium">Rejected</p>
+            </div>
+            <div class="tracker-step">
+                <div class="tracker-dot">3</div>
+                <p class="text-muted">Advance Payment</p>
+            </div>
+            <div class="tracker-step">
+                <div class="tracker-dot">4</div>
+                <p class="text-muted">Confirmed</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-xl">
+            <div>
+                <div class="card bg-red-50 border border-red-100 mb-md"
+                    style="background-color: #fef2f2; border-color: #fee2e2;">
+                    <div class="flex items-start gap-md">
+                        <div class="text-2xl">❌</div>
+                        <div>
+                            <h4 class="text-danger">Booking Rejected</h4>
+                            <p class="text-muted">The venue owner has declined this request. This could be due to
+                                unavailability or other reasons. No charges have been deducted.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="mb-md">Reason for Rejection</h4>
+                    <p class="italic text-muted line-clamp-3">"Unfortunately, the venue is undergoing maintenance on the
+                        requested date. Please try another date or check our other venues."</p>
+                </div>
+
+                <div class="mt-lg">
+                    <a href="user_listing.html" class="btn btn-primary">Browse Other Venues</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4 class="mb-md">Booking Summary</h4>
+                <div class="flex flex-col gap-sm">
+                    <div class="flex justify-between">
+                        <span class="text-muted">Venue</span>
+                        <strong>Grand Conference Hall</strong>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Date</span>
+                        <strong>20 Nov 2024</strong>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Time</span>
+                        <strong>09:00 AM - 05:00 PM (8 hrs)</strong>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Total Amount</span>
+                        <strong>₹ 40,000</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

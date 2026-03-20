@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span> <span
+                    class="badge badge-approved ml-sm">Owner</span></a>
+            <ul class="navbar-nav">
+                <li><a href="owner_dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="owner_bookings.html" class="nav-link">Bookings</a></li>
+                <li><a href="owner_manage_venue.html" class="nav-link">My Venues</a></li>
+                <li><a href="owner_invoices.html" class="nav-link active">Invoices</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center">O</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <h2 class="mb-lg">Invoices & Settlements</h2>
+
+        <div class="grid grid-cols-3 gap-lg mb-xl">
+            <div class="card bg-blue-50 border-blue-100">
+                <p class="text-sm text-blue-700 font-medium">Total Earnings</p>
+                <h3 class="text-blue-900">₹ 4,50,000</h3>
+            </div>
+            <div class="card bg-green-50 border-green-100">
+                <p class="text-sm text-green-700 font-medium">Settled Amount</p>
+                <h3 class="text-green-900">₹ 4,00,000</h3>
+            </div>
+            <div class="card bg-yellow-50 border-yellow-100">
+                <p class="text-sm text-yellow-700 font-medium">Pending Settlement</p>
+                <h3 class="text-yellow-900">₹ 50,000</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="flex justify-between items-center mb-md">
+                <h4>Transaction History</h4>
+                <button class="btn btn-sm btn-outline">Download Report</button>
+            </div>
+            <table class="w-full text-left" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr class="border-b text-muted text-sm">
+                        <th class="py-sm">Invoice ID</th>
+                        <th class="py-sm">Booking ID</th>
+                        <th class="py-sm">Date</th>
+                        <th class="py-sm">Details</th>
+                        <th class="py-sm">Amount</th>
+                        <th class="py-sm">Commission (10%)</th>
+                        <th class="py-sm">Net Payable</th>
+                        <th class="py-sm">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-md">#INV-8892</td>
+                        <td>#BK-8892</td>
+                        <td>10 Nov 2024</td>
+                        <td>Advance Payment</td>
+                        <td>₹ 20,000</td>
+                        <td class="text-danger">- ₹ 2,000</td>
+                        <td class="font-bold">₹ 18,000</td>
+                        <td><span class="badge badge-confirmed">Settled</span></td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-md">#INV-8821</td>
+                        <td>#BK-8821</td>
+                        <td>08 Nov 2024</td>
+                        <td>Full Payment</td>
+                        <td>₹ 30,000</td>
+                        <td class="text-danger">- ₹ 3,000</td>
+                        <td class="font-bold">₹ 27,000</td>
+                        <td><span class="badge badge-pending">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

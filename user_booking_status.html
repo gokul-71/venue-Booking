@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Status - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span></a>
+            <div class="navbar-actions">
+                <a href="user_dashboard.html" class="btn btn-primary btn-sm">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <h2 class="mb-xl">Booking Status: #BK-2024-8892</h2>
+
+        <div class="status-tracker">
+            <div class="tracker-line"></div>
+
+            <div class="tracker-step completed">
+                <div class="tracker-dot">✓</div>
+                <p>Request Sent</p>
+            </div>
+            <div class="tracker-step active">
+                <div class="tracker-dot">2</div>
+                <p>Owner Approval</p>
+            </div>
+            <div class="tracker-step">
+                <div class="tracker-dot">3</div>
+                <p>Advance Payment</p>
+            </div>
+            <div class="tracker-step">
+                <div class="tracker-dot">4</div>
+                <p>Confirmed</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-xl">
+            <div>
+                <div class="card bg-slate-50 mb-md">
+                    <div class="flex items-start gap-md">
+                        <div class="text-2xl">⏳</div>
+                        <div>
+                            <h4>Awaiting Approval</h4>
+                            <p>The venue owner has received your request. Please allow up to 4 hours for a response
+                                during working hours (10 AM - 8 PM).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulation Control for Prototype -->
+                <div class="card border border-dashed border-slate-300">
+                    <p class="text-xs text-muted font-bold uppercase mb-sm">Prototype Controls</p>
+                    <div class="flex gap-sm">
+                        <a href="user_booking_status_approved.html" class="btn btn-sm btn-secondary">Simulate: Owner
+                            Approved</a>
+                        <a href="user_booking_status_rejected.html"
+                            class="btn btn-sm btn-outline text-danger border-danger">Simulate: Owner Rejected</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4 class="mb-md">Booking Summary</h4>
+                <div class="flex flex-col gap-sm">
+                    <div class="flex justify-between">
+                        <span class="text-muted">Venue</span>
+                        <strong>Grand Conference Hall</strong>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Date</span>
+                        <strong>20 Nov 2024</strong>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Time</span>
+                        <strong>09:00 AM - 05:00 PM (8 hrs)</strong>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Total Amount</span>
+                        <strong>₹ 40,000</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

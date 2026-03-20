@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Conference Hall - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 200px 200px;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .gallery-main {
+            grid-row: span 2;
+            background-color: #cbd5e1;
+            border-radius: var(--radius-lg);
+        }
+
+        .gallery-sub {
+            background-color: #e2e8f0;
+            border-radius: var(--radius-lg);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span></a>
+            <ul class="navbar-nav">
+                <li><a href="user_listing.html" class="nav-link">Venues</a></li>
+                <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <!-- Breadcrumb -->
+        <div class="mb-md text-sm text-muted">
+            <a href="index.html">Home</a> > <a href="user_listing.html">Mumbai</a> > Grand Conference Hall
+        </div>
+
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-md">
+            <div>
+                <h1>Grand Conference Hall</h1>
+                <p class="text-lg">Andheri East, Mumbai • <span class="text-accent">★ 4.8 (24 Reviews)</span></p>
+            </div>
+            <div class="flex gap-sm">
+                <button class="btn btn-secondary">Share</button>
+                <button class="btn btn-secondary">Save</button>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <div class="gallery-main"></div>
+            <div class="gallery-sub"></div>
+            <div class="gallery-sub"></div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-lg">
+            <!-- Main Content -->
+            <div style="grid-column: span 2;">
+                <section class="mb-lg">
+                    <h3>About this venue</h3>
+                    <p>A premium conference hall suitable for annual general meetings, corporate training, and seminars.
+                        Located in the heart of the business district with excellent connectivity.</p>
+                </section>
+
+                <section class="mb-lg">
+                    <h3>Amenities</h3>
+                    <div class="grid grid-cols-2 gap-md">
+                        <div class="flex items-center gap-sm">✅ High-Speed WiFi</div>
+                        <div class="flex items-center gap-sm">✅ Projector & Screen</div>
+                        <div class="flex items-center gap-sm">✅ Central AC</div>
+                        <div class="flex items-center gap-sm">✅ Podium & Mic</div>
+                        <div class="flex items-center gap-sm">✅ Valet Parking (50 slots)</div>
+                        <div class="flex items-center gap-sm">✅ In-house Catering</div>
+                    </div>
+                </section>
+
+                <section class="mb-lg">
+                    <h3>Availability</h3>
+                    <div class="calendar-grid">
+                        <div class="calendar-header">Mon</div>
+                        <div class="calendar-header">Tue</div>
+                        <div class="calendar-header">Wed</div>
+                        <div class="calendar-header">Thu</div>
+                        <div class="calendar-header">Fri</div>
+                        <div class="calendar-header">Sat</div>
+                        <div class="calendar-header">Sun</div>
+
+                        <!-- Mock Days -->
+                        <div class="calendar-day text-muted">29</div>
+                        <div class="calendar-day text-muted">30</div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day" style="background-color: #fee2e2;">3 <br><span
+                                class="text-xs text-danger">Booked</span></div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                    </div>
+                </section>
+
+                <section class="mb-lg">
+                    <h3>Rules & Cancellation</h3>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li>No alcohol allowed inside the conference hall.</li>
+                        <li>Damage to property will be charged 100%.</li>
+                        <li>Full refund if cancelled 48 hours before the event.</li>
+                        <li>50% refund if cancelled 24 hours before.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Booking Card -->
+            <div>
+                <div class="card" style="position: sticky; top: 100px;">
+                    <h3 class="flex justify-between">
+                        ₹ 5,000 <span class="text-sm font-regular text-muted">/ hour</span>
+                    </h3>
+                    <p class="text-sm text-muted">Min booking: 4 hours</p>
+
+                    <hr class="mb-md" style="border: 0; border-top: 1px solid var(--border-color);">
+
+                    <form action="user_booking_request.html">
+                        <div class="form-group">
+                            <label class="form-label">Date</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="grid grid-cols-2 gap-sm mb-md">
+                            <div>
+                                <label class="form-label">Start Time</label>
+                                <select class="form-control">
+                                    <option>09:00 AM</option>
+                                    <option>10:00 AM</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label">End Time</label>
+                                <select class="form-control">
+                                    <option>01:00 PM</option>
+                                    <option>05:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-md p-2 bg-slate-50 border rounded text-sm">
+                            <p class="mb-0"><strong>Note:</strong> Owner approval required after request. Approvals
+                                between 10 AM - 8 PM.</p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Request Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

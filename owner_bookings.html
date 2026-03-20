@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Requests - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span> <span
+                    class="badge badge-approved ml-sm">Owner</span></a>
+            <ul class="navbar-nav">
+                <li><a href="owner_dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="owner_bookings.html" class="nav-link active">Bookings</a></li>
+                <li><a href="owner_manage_venue.html" class="nav-link">My Venues</a></li>
+                <li><a href="owner_invoices.html" class="nav-link">Invoices</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center">O</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <h2 class="mb-lg">Booking Requests</h2>
+
+        <div class="grid grid-cols-2 gap-lg mb-xl">
+            <!-- Request 1 -->
+            <div class="card border-l-4 border-l-warning">
+                <div class="flex justify-between mb-sm">
+                    <span class="badge badge-pending">Pending Approval</span>
+                    <span class="text-sm text-muted">Rec'd 2 hrs ago</span>
+                </div>
+                <h4 class="mb-xs">Annual Meet - Acme Corp</h4>
+                <p class="text-muted text-sm mb-md">Grand Conference Hall • 24 Nov 2024</p>
+
+                <div class="bg-slate-50 p-sm rounded mb-md">
+                    <div class="grid grid-cols-2 gap-sm text-sm">
+                        <div>
+                            <span class="text-muted">Headcount:</span> 150
+                        </div>
+                        <div>
+                            <span class="text-muted">Time:</span> 09:00 - 18:00
+                        </div>
+                        <div>
+                            <span class="text-muted">Total:</span> ₹ 45,000
+                        </div>
+                        <div>
+                            <span class="text-muted">Type:</span> Corporate
+                        </div>
+                    </div>
+                    <div class="mt-sm pt-sm border-t">
+                        <span class="text-muted block mb-xs">Message:</span>
+                        <p class="italic text-muted">"Need projector and lunch arrangements."</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-md">
+                    <button class="btn btn-primary flex-1 js-approve-btn">Approve</button>
+                    <button class="btn btn-outline text-danger border-danger flex-1 js-reject-btn">Reject</button>
+                </div>
+                <p class="text-xs text-muted mt-sm text-center">Approvals only allowed between 10 AM - 8 PM</p>
+            </div>
+
+            <!-- Request 2 -->
+            <div class="card border-l-4 border-l-warning">
+                <div class="flex justify-between mb-sm">
+                    <span class="badge badge-pending">Pending Approval</span>
+                    <span class="text-sm text-muted">Rec'd 5 hrs ago</span>
+                </div>
+                <h4 class="mb-xs">Product Launch - Beta Inc</h4>
+                <p class="text-muted text-sm mb-md">Sunset Garden • 15 Dec 2024</p>
+
+                <div class="bg-slate-50 p-sm rounded mb-md">
+                    <div class="grid grid-cols-2 gap-sm text-sm">
+                        <div>
+                            <span class="text-muted">Headcount:</span> 500
+                        </div>
+                        <div>
+                            <span class="text-muted">Time:</span> Full Day
+                        </div>
+                        <div>
+                            <span class="text-muted">Total:</span> ₹ 1,20,000
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-md">
+                    <button class="btn btn-primary flex-1 js-approve-btn">Approve</button>
+                    <button class="btn btn-outline text-danger border-danger flex-1 js-reject-btn">Reject</button>
+                </div>
+                <p class="text-xs text-muted mt-sm text-center">Approvals only allowed between 10 AM - 8 PM</p>
+            </div>
+        </div>
+
+        <h3 class="mb-md">Upcoming Bookings</h3>
+        <div class="card">
+            <table class="w-full text-left" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr class="border-b text-muted text-sm">
+                        <th class="py-sm">Booking ID</th>
+                        <th class="py-sm">Event</th>
+                        <th class="py-sm">Venue</th>
+                        <th class="py-sm">Date</th>
+                        <th class="py-sm">Status</th>
+                        <th class="py-sm">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-md">#BK-8821</td>
+                        <td>Training Session</td>
+                        <td>Boardroom A</td>
+                        <td>Tomorrow</td>
+                        <td><span class="badge badge-confirmed">Confirmed</span></td>
+                        <td><button class="btn btn-sm btn-outline">View</button></td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-md">#BK-8829</td>
+                        <td>Networking Dinner</td>
+                        <td>Grand Hall</td>
+                        <td>22 Nov 2024</td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td><button class="btn btn-sm btn-outline">View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users & Owners - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .sidebar {
+            width: 260px;
+            background-color: var(--primary-color);
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: var(--spacing-lg);
+        }
+
+        .main-content {
+            margin-left: 260px;
+        }
+
+        .sidebar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: var(--spacing-xl);
+            display: block;
+        }
+
+        .sidebar-link {
+            display: block;
+            padding: var(--spacing-md);
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="index.html" class="sidebar-brand text-accent">CorpVenue <span
+                class="text-xs text-white opacity-50 block font-normal">Admin Panel</span></a>
+
+        <nav>
+            <a href="admin_dashboard.html" class="sidebar-link">Dashboard</a>
+            <a href="admin_approvals.html" class="sidebar-link">Approvals <span
+                    class="badge badge-pending float-right text-xs">5</span></a>
+            <a href="admin_bookings.html" class="sidebar-link">All Bookings</a>
+            <a href="admin_disputes.html" class="sidebar-link">Disputes & Refunds</a>
+            <a href="admin_users_owners.html" class="sidebar-link active">Users & Owners</a>
+            <a href="#" class="sidebar-link">Settings</a>
+            <div class="mt-xl pt-lg border-t border-slate-700">
+                <a href="index.html" class="sidebar-link">Logout</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="bg-white border-b sticky top-0 z-50 px-xl py-md mb-lg">
+            <div class="flex justify-between items-center">
+                <h2>Users & Owners Management</h2>
+                <div class="flex items-center gap-md">
+                    <div class="w-8 h-8 bg-accent-color rounded-full flex items-center justify-center text-white">A
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="px-xl pb-xl">
+
+            <div class="flex gap-md mb-lg">
+                <button class="tab-btn active btn btn-outline" data-target="users-tab">Users</button>
+                <button class="tab-btn btn btn-outline" data-target="owners-tab">Owners</button>
+            </div>
+
+            <!-- Users Tab -->
+            <div id="users-tab" class="tab-pane active">
+                <div class="card">
+                    <h3 class="mb-md">Registered Users</h3>
+                    <table class="w-full text-left" style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr class="border-b text-muted text-sm">
+                                <th class="py-sm">ID</th>
+                                <th class="py-sm">Name</th>
+                                <th class="py-sm">Email</th>
+                                <th class="py-sm">Joined Date</th>
+                                <th class="py-sm">Status</th>
+                                <th class="py-sm">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-md">#USR-001</td>
+                                <td>Rahul Sharma</td>
+                                <td>rahul@example.com</td>
+                                <td>01 Nov 2024</td>
+                                <td><span class="badge badge-confirmed">Active</span></td>
+                                <td><button
+                                        class="btn btn-sm btn-outline text-danger border-danger js-ban-btn">Ban</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-md">#USR-002</td>
+                                <td>Priya Singh</td>
+                                <td>priya@example.com</td>
+                                <td>05 Nov 2024</td>
+                                <td><span class="badge badge-confirmed">Active</span></td>
+                                <td><button
+                                        class="btn btn-sm btn-outline text-danger border-danger js-ban-btn">Ban</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-md">#USR-003</td>
+                                <td>Amit Patel</td>
+                                <td>amit@example.com</td>
+                                <td>10 Nov 2024</td>
+                                <td><span class="badge badge-pending">Inactive</span></td>
+                                <td><button
+                                        class="btn btn-sm btn-outline text-danger border-danger js-ban-btn">Ban</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Owners Tab -->
+            <div id="owners-tab" class="tab-pane hidden" style="display: none;">
+                <div class="card">
+                    <h3 class="mb-md">Registered Owners</h3>
+                    <table class="w-full text-left" style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr class="border-b text-muted text-sm">
+                                <th class="py-sm">ID</th>
+                                <th class="py-sm">Name</th>
+                                <th class="py-sm">Properties</th>
+                                <th class="py-sm">Joined Date</th>
+                                <th class="py-sm">Verification</th>
+                                <th class="py-sm">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-md">#OWN-001</td>
+                                <td>Vikram Malhotra</td>
+                                <td>3 Venues</td>
+                                <td>20 Oct 2024</td>
+                                <td><span class="badge badge-approved">Verified</span></td>
+                                <td><button class="btn btn-sm btn-outline">View Details</button></td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-md">#OWN-002</td>
+                                <td>Sneha Reddy</td>
+                                <td>1 Venue</td>
+                                <td>25 Oct 2024</td>
+                                <td><span class="badge badge-pending">Pending</span></td>
+                                <td><button class="btn btn-sm btn-outline js-verify-btn">Verify</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

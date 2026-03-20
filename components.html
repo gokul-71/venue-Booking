@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .component-section {
+            border: 1px dashed #cbd5e1;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .component-title {
+            font-size: 0.875rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span> <span
+                    class="text-sm text-muted font-normal ml-sm">Design System</span></a>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <h1>UI Components</h1>
+        <p class="mb-xl text-muted">Reusable patterns and elements used across the platform.</p>
+
+        <!-- Buttons -->
+        <div class="component-section">
+            <h4 class="component-title">Buttons</h4>
+            <div class="flex gap-md items-center flex-wrap">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-outline">Outline Button</button>
+                <button class="btn btn-primary btn-sm">Small Primary</button>
+                <button class="btn btn-outline btn-sm">Small Outline</button>
+                <button class="btn btn-primary" disabled>Disabled</button>
+            </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="component-section">
+            <h4 class="component-title">Status Badges</h4>
+            <div class="flex gap-md">
+                <span class="badge badge-pending">Pending</span>
+                <span class="badge badge-approved">Approved</span>
+                <span class="badge badge-confirmed">Confirmed</span>
+                <span class="badge badge-cancelled">Cancelled</span>
+            </div>
+        </div>
+
+        <!-- Form Elements -->
+        <div class="component-section">
+            <h4 class="component-title">Form Elements</h4>
+            <div class="grid grid-cols-2 gap-lg" style="max-width: 800px;">
+                <div class="form-group">
+                    <label class="form-label">Input Label</label>
+                    <input type="text" class="form-control" placeholder="Placeholder text">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Select Menu</label>
+                    <select class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Checkbox</label>
+                    <div class="flex gap-md">
+                        <label class="flex items-center gap-sm"><input type="checkbox" checked> Option A</label>
+                        <label class="flex items-center gap-sm"><input type="checkbox"> Option B</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Radio</label>
+                    <div class="flex gap-md">
+                        <label class="flex items-center gap-sm"><input type="radio" name="r1" checked> Option A</label>
+                        <label class="flex items-center gap-sm"><input type="radio" name="r1"> Option B</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="component-section">
+            <h4 class="component-title">Cards</h4>
+            <div class="grid grid-cols-2 gap-lg">
+                <div class="card">
+                    <h4>Basic Card</h4>
+                    <p>This is a simple container for Content.</p>
+                </div>
+                <div class="stat-card"
+                    style="border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <p class="text-muted text-sm">Stat Label</p>
+                        <h3>1,234</h3>
+                    </div>
+                    <div
+                        style="width: 48px; height: 48px; background: #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        📊
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Venue Card -->
+        <div class="component-section">
+            <h4 class="component-title">Venue Card</h4>
+            <div style="width: 350px;">
+                <div class="venue-card">
+                    <div class="venue-image" style="height: 200px; background-color: #e2e8f0;"></div>
+                    <div class="venue-content" style="padding: 1rem;">
+                        <div class="flex justify-between items-center mb-md">
+                            <span class="badge badge-approved">Type</span>
+                            <div class="venue-rating text-warning">★ 4.8</div>
+                        </div>
+                        <h4>Venue Name</h4>
+                        <p class="text-sm text-muted">Location details...</p>
+                        <button class="btn btn-outline btn-full mt-md">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Listing - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">
+                Corp<span>Venue</span>
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="user_listing.html" class="nav-link active">Venues</a></li>
+                <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="owner_dashboard.html" class="btn btn-outline btn-sm">List Your Venue</a>
+                <a href="user_dashboard.html" class="btn btn-primary btn-sm">Login / Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <div class="flex gap-lg">
+            <!-- Sidebar Filters -->
+            <aside class="w-1/4" style="width: 250px; flex-shrink: 0;">
+                <div class="card">
+                    <h4 class="mb-md">Filters</h4>
+
+                    <div class="form-group">
+                        <label class="form-label">City</label>
+                        <select class="form-control">
+                            <option>Mumbai</option>
+                            <option>Pune</option>
+                            <option>Bangalore</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Area</label>
+                        <input type="text" placeholder="e.g. Andheri" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Capacity</label>
+                        <div class="flex gap-sm">
+                            <input type="number" placeholder="Min" class="form-control">
+                            <input type="number" placeholder="Max" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Venue Type</label>
+                        <div class="flex flex-col gap-sm">
+                            <label><input type="checkbox"> Indoor Hall</label>
+                            <label><input type="checkbox"> Open Ground</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Availability</label>
+                        <div class="flex flex-col gap-sm">
+                            <label><input type="checkbox"> Hourly</label>
+                            <label><input type="checkbox"> Full Day</label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-full mt-md">Apply Filters</button>
+                    <button class="btn btn-secondary btn-full mt-sm">Reset</button>
+                </div>
+            </aside>
+
+            <!-- Venue Grid -->
+            <main class="flex-1">
+                <div class="flex justify-between items-center mb-md">
+                    <h3>Showing 24 Venues in Mumbai</h3>
+                    <select class="form-control" style="width: auto;">
+                        <option>Sort by: Recommended</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Rating: High to Low</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-3 gap-md">
+                    <!-- Venue Card 1 -->
+                    <div class="venue-card">
+                        <div class="venue-image"></div>
+                        <div class="venue-content">
+                            <div class="flex justify-between items-center mb-md">
+                                <span class="badge badge-approved">Indoor</span>
+                                <div class="venue-rating">★ 4.8</div>
+                            </div>
+                            <h4>Grand Conference Hall</h4>
+                            <p class="text-sm">Andheri East, Mumbai</p>
+                            <div class="flex gap-md text-sm text-muted mb-md">
+                                <span>👥 200</span>
+                                <span>₹ 5000/hr</span>
+                            </div>
+                            <a href="user_details.html" class="btn btn-outline btn-full">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Repeated Cards for Prototype -->
+                    <div class="venue-card">
+                        <div class="venue-image"></div>
+                        <div class="venue-content">
+                            <div class="flex justify-between items-center mb-md">
+                                <span class="badge badge-approved">Outdoor</span>
+                                <div class="venue-rating">★ 4.5</div>
+                            </div>
+                            <h4>Sunset Garden</h4>
+                            <p class="text-sm">Juhu, Mumbai</p>
+                            <div class="flex gap-md text-sm text-muted mb-md">
+                                <span>👥 500</span>
+                                <span>₹ 50,000/day</span>
+                            </div>
+                            <a href="user_details.html" class="btn btn-outline btn-full">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="venue-card">
+                        <div class="venue-image"></div>
+                        <div class="venue-content">
+                            <div class="flex justify-between items-center mb-md">
+                                <span class="badge badge-approved">Indoor</span>
+                                <div class="venue-rating">★ 4.2</div>
+                            </div>
+                            <h4>Tech Hub Meeting Room</h4>
+                            <p class="text-sm">Powai, Mumbai</p>
+                            <div class="flex gap-md text-sm text-muted mb-md">
+                                <span>👥 15</span>
+                                <span>₹ 1000/hr</span>
+                            </div>
+                            <a href="user_details.html" class="btn btn-outline btn-full">View Details</a>
+                        </div>
+                    </div>
+                    <div class="venue-card">
+                        <div class="venue-image"></div>
+                        <div class="venue-content">
+                            <div class="flex justify-between items-center mb-md">
+                                <span class="badge badge-approved">Indoor</span>
+                                <div class="venue-rating">★ 4.8</div>
+                            </div>
+                            <h4>Grand Conference Hall</h4>
+                            <p class="text-sm">Andheri East, Mumbai</p>
+                            <div class="flex gap-md text-sm text-muted mb-md">
+                                <span>👥 200</span>
+                                <span>₹ 5000/hr</span>
+                            </div>
+                            <a href="user_details.html" class="btn btn-outline btn-full">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="venue-card">
+                        <div class="venue-image"></div>
+                        <div class="venue-content">
+                            <div class="flex justify-between items-center mb-md">
+                                <span class="badge badge-approved">Outdoor</span>
+                                <div class="venue-rating">★ 4.5</div>
+                            </div>
+                            <h4>Sunset Garden</h4>
+                            <p class="text-sm">Juhu, Mumbai</p>
+                            <div class="flex gap-md text-sm text-muted mb-md">
+                                <span>👥 500</span>
+                                <span>₹ 50,000/day</span>
+                            </div>
+                            <a href="user_details.html" class="btn btn-outline btn-full">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="venue-card">
+                        <div class="venue-image"></div>
+                        <div class="venue-content">
+                            <div class="flex justify-between items-center mb-md">
+                                <span class="badge badge-approved">Indoor</span>
+                                <div class="venue-rating">★ 4.2</div>
+                            </div>
+                            <h4>Tech Hub Meeting Room</h4>
+                            <p class="text-sm">Powai, Mumbai</p>
+                            <div class="flex gap-md text-sm text-muted mb-md">
+                                <span>👥 15</span>
+                                <span>₹ 1000/hr</span>
+                            </div>
+                            <a href="user_details.html" class="btn btn-outline btn-full">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 CorpVenue. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

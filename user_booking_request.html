@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Booking - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span></a>
+            <div class="navbar-actions">
+                <a href="#" class="btn btn-primary btn-sm">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <div class="grid grid-cols-2 gap-xl">
+            <div>
+                <h2>Booking Request</h2>
+                <div class="card mb-md">
+                    <h4 class="mb-md">Venue Details</h4>
+                    <div class="flex gap-md mb-sm">
+                        <div
+                            style="width: 80px; height: 80px; background-color: #e2e8f0; border-radius: var(--radius-md);">
+                        </div>
+                        <div>
+                            <h5>Grand Conference Hall</h5>
+                            <p class="text-sm text-muted">Andheri East, Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="mb-md">Event Details</h4>
+                    <form action="user_booking_status.html">
+                        <div class="form-group">
+                            <label class="form-label">Date</label>
+                            <input type="date" value="2024-11-20" class="form-control" readonly>
+                        </div>
+                        <div class="grid grid-cols-2 gap-md mb-md">
+                            <div>
+                                <label class="form-label">Start Time</label>
+                                <input type="text" value="09:00 AM" class="form-control" readonly>
+                            </div>
+                            <div>
+                                <label class="form-label">End Time</label>
+                                <input type="text" value="05:00 PM" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Event Type</label>
+                            <select class="form-control">
+                                <option>Annual General Meeting</option>
+                                <option>Training Session</option>
+                                <option>Product Launch</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message to Owner (Optional)</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+
+                        <div class="p-2 bg-blue-50 border border-blue-100 rounded mb-md text-sm text-blue-700">
+                            ⓘ Your request will be sent to the venue owner for approval. You will be notified via
+                            email/SMS. Approval hours: 10 AM - 8 PM.
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-muted">Total Estimated Cost</p>
+                                <h3>₹ 40,000</h3>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+                <!-- Can add an illustration here if needed -->
+                <div class="text-center p-md text-muted">
+                    <div style="font-size: 4rem; opacity: 0.2;">📅</div>
+                    <p>Secure specific dates for your corporate events.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

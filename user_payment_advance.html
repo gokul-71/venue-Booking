@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Payment - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span></a>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <div class="grid grid-cols-2 gap-xl">
+            <div>
+                <h2 class="mb-lg">Secure Payment</h2>
+                <div class="card mb-md">
+                    <h4 class="mb-md">Payment Method</h4>
+                    <div class="flex flex-col gap-sm">
+                        <label class="flex items-center gap-md p-sm border rounded cursor-pointer hover:bg-slate-50">
+                            <input type="radio" name="method" checked>
+                            <span>Credit / Debit Card</span>
+                            <span class="ml-auto text-muted">Visa, Mastercard</span>
+                        </label>
+                        <label class="flex items-center gap-md p-sm border rounded cursor-pointer hover:bg-slate-50">
+                            <input type="radio" name="method">
+                            <span>Net Banking</span>
+                        </label>
+                        <label class="flex items-center gap-md p-sm border rounded cursor-pointer hover:bg-slate-50">
+                            <input type="radio" name="method">
+                            <span>UPI</span>
+                        </label>
+                        <label class="flex items-center gap-md p-sm border rounded cursor-pointer hover:bg-slate-50">
+                            <input type="radio" name="method">
+                            <span>Corporate Wallet</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="mb-md">Card Details</h4>
+                    <form action="user_booking_confirmed.html">
+                        <div class="form-group">
+                            <label class="form-label">Card Number</label>
+                            <input type="text" placeholder="0000 0000 0000 0000" class="form-control">
+                        </div>
+                        <div class="grid grid-cols-2 gap-md mb-md">
+                            <div>
+                                <label class="form-label">Expiry</label>
+                                <input type="text" placeholder="MM/YY" class="form-control">
+                            </div>
+                            <div>
+                                <label class="form-label">CVV</label>
+                                <input type="text" placeholder="123" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Card Holder Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Pay ₹ 20,000</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card h-fit">
+                <h4 class="mb-md">Payment Summary</h4>
+                <div class="flex justify-between mb-sm">
+                    <span class="text-muted">Booking ID</span>
+                    <span>#BK-2024-8892</span>
+                </div>
+                <div class="flex justify-between mb-sm">
+                    <span class="text-muted">Description</span>
+                    <span>Advance Payment (50%)</span>
+                </div>
+                <hr class="my-md">
+                <div class="flex justify-between items-center text-lg font-bold">
+                    <span>Total Payable</span>
+                    <span>₹ 20,000</span>
+                </div>
+                <div class="mt-md text-xs text-muted">
+                    Secure 256-bit SSL encrypted payment. <br>
+                    By clicking pay, you agree to the terms and cancellation policy.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

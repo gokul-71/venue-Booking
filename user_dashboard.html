@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span></a>
+            <div class="navbar-actions">
+                <div class="flex items-center gap-sm">
+                    <div
+                        style="width: 32px; height: 32px; background-color: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem;">
+                        AC</div>
+                    <span class="font-medium">Acme Corp</span>
+                </div>
+                <a href="index.html" class="btn btn-outline btn-sm ml-sm">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <h2 class="mb-lg">Dashboard</h2>
+
+        <!-- Tabs -->
+        <div class="flex gap-md border-b mb-lg">
+            <button class="tab-btn active px-md py-sm border-b-2 border-primary-color font-medium"
+                data-target="bookings">My Bookings</button>
+            <button class="tab-btn px-md py-sm text-muted" data-target="history">History</button>
+            <button class="tab-btn px-md py-sm text-muted" data-target="invoices">Invoices</button>
+            <button class="tab-btn px-md py-sm text-muted" data-target="support">Support</button>
+        </div>
+
+        <!-- Tab Panes -->
+        <div id="bookings" class="tab-pane active">
+            <!-- Booking Card 1 (Confirmed) -->
+            <div class="card mb-md">
+                <div class="flex justify-between items-start mb-md">
+                    <div class="flex gap-md">
+                        <div
+                            style="width: 100px; height: 80px; background-color: #e2e8f0; border-radius: var(--radius-md);">
+                        </div>
+                        <div>
+                            <h4>Grand Conference Hall</h4>
+                            <p class="text-muted">20 Nov 2024 • 09:00 AM - 05:00 PM</p>
+                            <p class="text-sm">Andheri East, Mumbai</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <span class="badge badge-confirmed mb-sm">Confirmed</span>
+                        <p class="font-bold">₹ 40,000</p>
+                        <p class="text-xs text-danger">Due: ₹ 20,000</p>
+                    </div>
+                </div>
+                <div class="flex gap-md justify-end">
+                    <button class="btn btn-outline btn-sm">View Details</button>
+                    <a href="user_payment_advance.html" class="btn btn-primary btn-sm">Pay Balance</a>
+                </div>
+            </div>
+
+            <!-- Booking Card 2 (Pending) -->
+            <div class="card mb-md">
+                <div class="flex justify-between items-start mb-md">
+                    <div class="flex gap-md">
+                        <div
+                            style="width: 100px; height: 80px; background-color: #e2e8f0; border-radius: var(--radius-md);">
+                        </div>
+                        <div>
+                            <h4>Sunset Garden</h4>
+                            <p class="text-muted">15 Dec 2024 • Full Day</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <span class="badge badge-pending mb-sm">Pending Approval</span>
+                        <p class="font-bold">₹ 50,000</p>
+                    </div>
+                </div>
+                <div class="flex gap-md justify-end">
+                    <button class="btn btn-outline btn-sm">Cancel Request</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="history" class="tab-pane hidden">
+            <p class="text-muted">No past bookings.</p>
+        </div>
+
+        <div id="invoices" class="tab-pane hidden">
+            <table class="w-full text-left" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr class="border-b">
+                        <th class="py-sm">Invoice ID</th>
+                        <th class="py-sm">Date</th>
+                        <th class="py-sm">Amount</th>
+                        <th class="py-sm">Status</th>
+                        <th class="py-sm">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-sm">#INV-001</td>
+                        <td class="py-sm">11 Nov 2024</td>
+                        <td class="py-sm">₹ 20,000</td>
+                        <td class="py-sm"><span class="badge badge-confirmed">Paid</span></td>
+                        <td class="py-sm"><a href="#" class="text-accent">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="support" class="tab-pane hidden">
+            <div class="card">
+                <h4>Contact Support</h4>
+                <p class="mb-md">Need help with a booking? Reach out to us.</p>
+                <div class="flex gap-lg">
+                    <div>
+                        <p class="text-muted text-sm">Email</p>
+                        <p class="font-bold">support@corpvenue.com</p>
+                    </div>
+                    <div>
+                        <p class="text-muted text-sm">Phone</p>
+                        <p class="font-bold">+91 1800 123 4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</body>
+
+</html>

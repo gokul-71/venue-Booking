@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Bookings - Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .sidebar {
+            width: 260px;
+            background-color: var(--primary-color);
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: var(--spacing-lg);
+        }
+
+        .main-content {
+            margin-left: 260px;
+        }
+
+        .sidebar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: var(--spacing-xl);
+            display: block;
+        }
+
+        .sidebar-link {
+            display: block;
+            padding: var(--spacing-md);
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="index.html" class="sidebar-brand text-accent">CorpVenue <span
+                class="text-xs text-white opacity-50 block font-normal">Admin Panel</span></a>
+
+        <nav>
+            <a href="admin_dashboard.html" class="sidebar-link">Dashboard</a>
+            <a href="admin_approvals.html" class="sidebar-link">Approvals <span
+                    class="badge badge-pending float-right text-xs">5</span></a>
+            <a href="admin_bookings.html" class="sidebar-link active">All Bookings</a>
+            <a href="admin_disputes.html" class="sidebar-link">Disputes & Refunds</a>
+            <a href="admin_users_owners.html" class="sidebar-link">Users & Owners</a>
+            <a href="#" class="sidebar-link">Settings</a>
+            <div class="mt-xl pt-lg border-t border-slate-700">
+                <a href="index.html" class="sidebar-link">Logout</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="bg-white border-b sticky top-0 z-50 px-xl py-md mb-lg">
+            <div class="flex justify-between items-center">
+                <h2>Booking Management</h2>
+                <div class="flex gap-sm">
+                    <input type="text" placeholder="Search by Booking ID" class="form-control" style="width: 250px;">
+                    <button class="btn btn-secondary">Export CSV</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="px-xl pb-xl">
+            <div class="card mb-lg">
+                <div class="flex gap-md mb-md">
+                    <button class="btn btn-sm btn-primary">All</button>
+                    <button class="btn btn-sm btn-secondary">Pending</button>
+                    <button class="btn btn-sm btn-secondary">Confirmed</button>
+                    <button class="btn btn-sm btn-secondary">Completed</button>
+                    <button class="btn btn-sm btn-secondary">Cancelled</button>
+                </div>
+
+                <table class="w-full text-left" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr class="border-b text-muted text-sm">
+                            <th class="py-sm">Booking ID</th>
+                            <th class="py-sm">User</th>
+                            <th class="py-sm">Venue</th>
+                            <th class="py-sm">Date</th>
+                            <th class="py-sm">Total Amount</th>
+                            <th class="py-sm">Commission</th>
+                            <th class="py-sm">Status</th>
+                            <th class="py-sm">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-md">#BK-8892</td>
+                            <td>Acme Corp</td>
+                            <td>Grand Hall</td>
+                            <td>20 Nov 2024</td>
+                            <td>₹ 40,000</td>
+                            <td class="text-success">₹ 4,000</td>
+                            <td><span class="badge badge-confirmed">Confirmed</span></td>
+                            <td><button class="btn btn-xs btn-outline">View</button></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-md">#BK-8821</td>
+                            <td>TechSol</td>
+                            <td>Boardroom A</td>
+                            <td>12 Mar 2024</td>
+                            <td>₹ 15,000</td>
+                            <td class="text-success">₹ 1,500</td>
+                            <td><span class="badge badge-approved">Completed</span></td>
+                            <td><button class="btn btn-xs btn-outline">View</button></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-md">#BK-8899</td>
+                            <td>Global Inc</td>
+                            <td>Open Ground</td>
+                            <td>01 Dec 2024</td>
+                            <td>₹ 1,00,000</td>
+                            <td class="text-success">₹ 10,000</td>
+                            <td><span class="badge badge-pending">Pending</span></td>
+                            <td><button class="btn btn-xs btn-outline">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="flex justify-center mt-md">
+                    <button class="btn btn-sm btn-secondary disabled">Previous</button>
+                    <button class="btn btn-sm btn-secondary ml-sm">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Flows - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .flow-step {
+            border: 2px solid var(--border-color);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            background-color: white;
+            text-align: center;
+            width: 200px;
+        }
+
+        .flow-arrow {
+            font-size: 2rem;
+            color: var(--text-muted);
+        }
+
+        .flow-container {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            overflow-x: auto;
+            padding-bottom: var(--spacing-lg);
+        }
+
+        .actor-label {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-xs);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span> <span
+                    class="text-sm text-muted font-normal ml-sm">Flows</span></a>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <h2 class="mb-xl">Platform Workflows</h2>
+
+        <div class="mb-xl">
+            <h3 class="mb-lg">1. Booking Flow</h3>
+            <div class="flow-container">
+                <div class="flow-step">
+                    <div class="actor-label">User</div>
+                    <p>Search & Select Venue</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">User</div>
+                    <p>Send Booking Request</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">Owner</div>
+                    <p>Receive Notification</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">Owner</div>
+                    <p>Approve Request</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">User</div>
+                    <p>Pay Advance (50%)</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step bg-green-50 border-green-200">
+                    <div class="actor-label">System</div>
+                    <p>Booking Confirmed</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-xl">
+            <h3 class="mb-lg">2. Venue Onboarding Flow</h3>
+            <div class="flow-container">
+                <div class="flow-step">
+                    <div class="actor-label">Owner</div>
+                    <p>Sign Up</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">Owner</div>
+                    <p>Add Venue Details & Docs</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">Admin</div>
+                    <p>Verify Documents</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step bg-green-50 border-green-200">
+                    <div class="actor-label">Admin</div>
+                    <p>Approve Venue</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">System</div>
+                    <p>Venue Listed Live</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-xl">
+            <h3 class="mb-lg">3. Payment & Settlement Flow</h3>
+            <div class="flow-container">
+                <div class="flow-step">
+                    <div class="actor-label">User</div>
+                    <p>Makes Payment</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">System</div>
+                    <p>Hold Funds in Escrow</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">System</div>
+                    <p>Event Completion</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="actor-label">Admin</div>
+                    <p>Deduct Commission</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step bg-green-50 border-green-200">
+                    <div class="actor-label">Owner</div>
+                    <p>Receive Settlement</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
