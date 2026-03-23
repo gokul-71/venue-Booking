@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Venue - CorpVenue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="navbar-brand">Corp<span>Venue</span> <span
+                    class="badge badge-approved ml-sm">Owner</span></a>
+            <ul class="navbar-nav">
+                <li><a href="owner_dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="owner_bookings.html" class="nav-link">Bookings</a></li>
+                <li><a href="owner_manage_venue.html" class="nav-link active">My Venues</a></li>
+                <li><a href="owner_invoices.html" class="nav-link">Invoices</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center">O</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-lg">
+        <div class="flex justify-between items-center mb-lg">
+            <h2>Add New Venue</h2>
+            <a href="owner_manage_venue.html" class="btn btn-outline">&larr; Back to My Venues</a>
+        </div>
+
+        <form id="addVenueForm">
+            <div class="grid grid-cols-3 gap-lg">
+                <div style="grid-column: span 2;">
+                    <div class="card mb-lg">
+                        <h4 class="mb-md">Basic Details</h4>
+                        <div class="form-group">
+                            <label class="form-label" for="venueName">Venue Name</label>
+                            <input type="text" id="venueName" placeholder="e.g. Grand Conference Hall" class="form-control" required>
+                        </div>
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="form-group">
+                                <label class="form-label" for="venueType">Venue Type</label>
+                                <select id="venueType" class="form-control">
+                                    <option value="Indoor Hall">Indoor Hall</option>
+                                    <option value="Open Ground">Open Ground</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="capacity">Capacity (Headcount)</label>
+                                <input type="number" id="capacity" placeholder="e.g. 200" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="description">Description</label>
+                            <textarea id="description" rows="4" class="form-control" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="card mb-lg">
+                        <h4 class="mb-md">Location</h4>
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="form-group">
+                                <label class="form-label" for="city">City</label>
+                                <select id="city" class="form-control">
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Pune">Pune</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="area">Area</label>
+                                <input type="text" id="area" placeholder="e.g. Andheri East" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="fullAddress">Full Address</label>
+                            <textarea id="fullAddress" rows="2" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="googleMapsLink">Google Maps Link</label>
+                            <input type="url" id="googleMapsLink" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="card mb-lg">
+                        <h4 class="mb-md">Policies & Pricing</h4>
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="form-group">
+                                <label class="form-label" for="hourlyRate">Hourly Rate (₹)</label>
+                                <input type="number" id="hourlyRate" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="fullDayRate">Full Day Rate (₹)</label>
+                                <input type="number" id="fullDayRate" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="cancellationPolicy">Cancellation Policy</label>
+                            <textarea id="cancellationPolicy" rows="3" class="form-control"
+                                placeholder="e.g. Full refund 48 hours prior..." required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card mb-lg">
+                        <h4 class="mb-md">Amenities & Parking</h4>
+                        <div class="form-group">
+                            <label class="flex items-center gap-sm mb-sm"><input type="checkbox" id="amenityAc" checked> Air
+                                Conditioning</label>
+                            <label class="flex items-center gap-sm mb-sm"><input type="checkbox" id="amenityWifi" checked> WiFi</label>
+                            <label class="flex items-center gap-sm mb-sm"><input type="checkbox" id="amenityProjector"> Projector</label>
+                            <label class="flex items-center gap-sm mb-sm"><input type="checkbox" id="amenitySound"> Sound System</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="parkingCapacity">Parking Capacity (Cars)</label>
+                            <input type="number" id="parkingCapacity" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="card mb-lg">
+                        <h4 class="mb-md">Documents & Photos</h4>
+                        <div class="form-group">
+                            <label class="form-label" for="venueImageUrl">Main Venue Photo URL</label>
+                            <input type="url" id="venueImageUrl" class="form-control" placeholder="https://example.com/photo.jpg">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ownership Proof (PDF)</label>
+                            <input type="file" class="form-control">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitVenueBtn" class="btn btn-primary btn-full">Submit for Approval</button>
+                    <button type="button" class="btn btn-secondary btn-full mt-md">Save Draft</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/add-venue.js"></script>
+</body>
+
+</html>

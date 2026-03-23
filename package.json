@@ -1,0 +1,28 @@
+{
+  "name": "venue-booking",
+  "version": "1.0.0",
+  "description": "CorpVenue is a web-based platform designed to streamline the process of booking venues for corporate events. It connects corporate clients with venue owners, ensuring a trusted environment for professional gatherings.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gokul-71/venue-Booking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gokul-71/venue-Booking/issues"
+  },
+  "homepage": "https://github.com/gokul-71/venue-Booking#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0"
+  }
+}
