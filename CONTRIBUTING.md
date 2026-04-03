@@ -2,11 +2,11 @@
 
 ## Team Members, Branches & Roles
 
-| Person     | Role       | Branch Name | Works On           |
-|------------|------------|-------------|---------------------|
-| **Gokul**  | User Side  | `gokul`     | All user pages       |
-| **Friend 1** | Owner Side | `friend1`   | All owner pages      |
-| **Friend 2** | Admin Side | `friend2`   | All admin pages      |
+| Person       | Role       | Branch Name | Works On           |
+|-------------|------------|-------------|---------------------|
+| **Gokul**   | User Side  | `gokul`     | All user pages       |
+| **Varatha**  | Owner Side | `varatha`   | All owner pages      |
+| **Fami**     | Admin Side | `fami`      | All admin pages      |
 
 > ⚠️ **Nobody pushes directly to `main`.** Always work in your own branch.
 
@@ -28,8 +28,8 @@ user_booking_confirmed.html
 user_payment_advance.html
 ```
 
-### 🔵 Friend 1 (Owner Side)
-Only Friend 1 should edit these files:
+### 🔵 Varatha (Owner Side)
+Only Varatha should edit these files:
 ```
 owner_dashboard.html
 owner_add_venue.html
@@ -39,8 +39,8 @@ owner_manage_venue.html
 js/add-venue.js
 ```
 
-### 🟠 Friend 2 (Admin Side)
-Only Friend 2 should edit these files:
+### 🟠 Fami (Admin Side)
+Only Fami should edit these files:
 ```
 admin_dashboard.html
 admin_approvals.html
@@ -87,11 +87,11 @@ JWT_SECRET=ask_gokul_for_this
 
 ### Step 4: Switch to YOUR branch
 ```bash
-# If you are Friend 1 (Owner side):
-git checkout friend1
+# Varatha:
+git checkout varatha
 
-# If you are Friend 2 (Admin side):
-git checkout friend2
+# Fami:
+git checkout fami
 ```
 
 ### Step 5: Run the project
@@ -142,9 +142,9 @@ The `server.js` file has API endpoints for all 3 roles:
 
 | Your Role | API Endpoints You'll Use |
 |-----------|--------------------------|
-| **User**  | `GET /api/venues`, `POST /api/bookings`, `GET /api/bookings?user_id=` |
-| **Owner** | `POST /api/venues`, `GET /api/venues?owner_id=`, `GET /api/bookings?owner_id=`, `PATCH /api/bookings/:id/status` |
-| **Admin** | `GET /api/admin/venues/pending`, `PATCH /api/admin/venues/:id/status`, `GET /api/admin/users`, `PATCH /api/admin/users/:id/status` |
+| **User (Gokul)** | `GET /api/venues`, `POST /api/bookings`, `GET /api/bookings?user_id=` |
+| **Owner (Varatha)** | `POST /api/venues`, `GET /api/venues?owner_id=`, `GET /api/bookings?owner_id=`, `PATCH /api/bookings/:id/status` |
+| **Admin (Fami)** | `GET /api/admin/venues/pending`, `PATCH /api/admin/venues/:id/status`, `GET /api/admin/users`, `PATCH /api/admin/users/:id/status` |
 
 If you need a **new API endpoint**, tell Gokul and he will add it to `server.js`.
 
